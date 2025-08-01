@@ -1,46 +1,198 @@
-# Getting Started with Create React App
+# GMG EHS Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, glassmorphism-styled Environmental Health & Safety (EHS) management dashboard built with React, TypeScript, and Framer Motion.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Glassmorphism UI Design**: Beautiful translucent interface with backdrop blur effects
+- **Role-Based Access Control**: 7 different user roles with granular permissions
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Animated Interactions**: Smooth animations powered by Framer Motion
+- **12 Core Modules**: Comprehensive EHS management system
+- **Real-time Role Switching**: Demo-friendly role switcher for presentations
+- **Progressive Module Rollout**: "Coming Soon" placeholders for future modules
 
-### `npm start`
+## 🎨 Design System
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Glassmorphism**: Translucent cards with backdrop blur
+- **Animated Backgrounds**: Floating gradient orbs with CSS animations
+- **Modern Typography**: Inter font family with gradient text effects
+- **Consistent Spacing**: CSS custom properties for maintainable design
+- **Accessibility**: WCAG 2.1 AA compliant focus states and keyboard navigation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 👥 User Roles
 
-### `npm test`
+1. **GMG Admin** - Full system access
+2. **Compliance Coordinator** - Document and training management
+3. **Area Manager** - Incident reporting and site management
+4. **Site Manager** - Local site operations
+5. **Employee (Field Tech)** - Mobile-focused incident reporting
+6. **Client** - Read-only access to relevant modules
+7. **Auditor** - Read-only access for compliance reviews
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Installation
 
-### `npm run build`
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd gmg-ehs-dashboard
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
 
-### `npm run eject`
+## 🔐 Authentication & Demo
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Login
+- Use any email and password combination
+- Recommended demo credentials: `demo@gmg.com` / `demo123`
+- The system will accept any valid email format
+- No actual authentication backend required for demo
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Role Switching
+1. After login, click on your user profile in the sidebar
+2. Select a different role from the dropdown
+3. The interface will update to show only accessible modules
+4. Navigation and permissions update in real-time
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Demo Scenarios
+- **Admin Demo**: Switch to "GMG Admin" to see all modules
+- **Field Tech Demo**: Switch to "Employee (Field Tech)" for mobile-focused view
+- **Client Demo**: Switch to "Client" for read-only experience
+- **Auditor Demo**: Switch to "Auditor" for compliance review mode
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🏗️ Project Structure
 
-## Learn More
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Layout.tsx      # Main layout with sidebar
+│   ├── Sidebar.tsx     # Navigation sidebar
+│   └── ComingSoon.tsx  # Placeholder for future modules
+├── contexts/           # React Context providers
+│   └── AuthContext.tsx # Authentication and role management
+├── pages/              # Page components
+│   ├── LoginPage.tsx   # Authentication page
+│   └── DashboardPage.tsx # Main dashboard
+├── styles/             # Global styles
+│   └── GlobalStyles.ts # CSS-in-JS global styles
+├── types/              # TypeScript type definitions
+│   └── index.ts        # Core type definitions
+├── utils/              # Utility functions
+│   └── moduleConfig.ts # Module configuration
+└── App.tsx            # Main application component
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎯 Module Status
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### ✅ Implemented Modules
+- **Dashboard**: Overview with statistics and quick actions
+- **Employees**: Employee management (Coming Soon page)
+- **Incident Reporting**: Incident tracking (Coming Soon page)
+- **Documents**: Document management (Coming Soon page)
+- **Toolbox Talks**: Safety discussions (Coming Soon page)
+- **Training & Certification**: Training management (Coming Soon page)
+
+### 🚧 Coming Soon Modules
+- **Notifications**: Real-time alerts system
+- **JHA**: Job Hazard Analysis tools
+- **Support**: Help desk and support system
+- **Equipment Inspection**: Equipment management
+- **Site Assessment**: Site safety audits
+- **Messaging**: Internal communication platform
+
+## 🛠️ Technology Stack
+
+- **React 18**: Modern React with hooks
+- **TypeScript**: Type-safe development
+- **React Router**: Client-side routing
+- **Styled Components**: CSS-in-JS styling
+- **Framer Motion**: Animation library
+- **Lucide React**: Modern icon library
+
+## 🎨 Customization
+
+### Colors and Themes
+Edit `src/styles/GlobalStyles.ts` to modify:
+- Primary gradient colors
+- Glassmorphism opacity levels
+- Border radius values
+- Animation timings
+
+### Module Configuration
+Update `src/utils/moduleConfig.ts` to:
+- Add new modules
+- Modify module icons
+- Change implementation status
+- Update module descriptions
+
+### Role Permissions
+Modify `src/contexts/AuthContext.tsx` to:
+- Add new user roles
+- Update permission matrices
+- Change access control logic
+
+## 📱 Responsive Design
+
+- **Desktop**: Full sidebar navigation
+- **Tablet**: Collapsible sidebar
+- **Mobile**: Hamburger menu with slide-out navigation
+- **Touch-friendly**: Optimized for touch interactions
+
+## 🔧 Development
+
+### Adding New Modules
+1. Update `moduleConfig.ts` with new module details
+2. Create module page component in `pages/`
+3. Add route in `App.tsx`
+4. Update role permissions in `AuthContext.tsx`
+
+### Styling Guidelines
+- Use CSS custom properties for consistency
+- Follow glassmorphism design principles
+- Implement smooth transitions
+- Ensure accessibility compliance
+
+## 🚀 Deployment
+
+### Build for Production
+```bash
+npm run build
+```
+
+### Deploy to Static Hosting
+The build output can be deployed to:
+- Netlify
+- Vercel
+- GitHub Pages
+- AWS S3
+
+## 📄 License
+
+This project is proprietary software for GMG Environmental Health & Safety.
+
+## 🤝 Contributing
+
+For development questions or clarifications:
+1. Review the relevant module specifications
+2. Check the wireframes and design documents
+3. Contact the project lead for business rule clarifications
+
+## 📞 Support
+
+For technical support or feature requests, please contact the development team.
+
+---
+
+**Built with ❤️ for GMG Environmental Health & Safety**
+# gmgDash

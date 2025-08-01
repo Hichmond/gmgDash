@@ -1,0 +1,117 @@
+import { ModuleConfig } from '../types';
+import { 
+  LayoutDashboard, 
+  Users, 
+  AlertTriangle, 
+  FileText, 
+  MessageSquare, 
+  GraduationCap,
+  Bell,
+  Shield,
+  HelpCircle,
+  Wrench,
+  MapPin,
+  MessageCircle
+} from 'lucide-react';
+
+export const moduleConfigs: ModuleConfig[] = [
+  {
+    name: 'Dashboard',
+    icon: 'LayoutDashboard',
+    path: '/dashboard',
+    description: 'Overview and analytics',
+    isImplemented: true,
+  },
+  {
+    name: 'Employees',
+    icon: 'Users',
+    path: '/employees',
+    description: 'Employee management',
+    isImplemented: true,
+  },
+  {
+    name: 'Incident Reporting',
+    icon: 'AlertTriangle',
+    path: '/incident-reporting',
+    description: 'Report and track incidents',
+    isImplemented: true,
+  },
+  {
+    name: 'Documents',
+    icon: 'FileText',
+    path: '/documents',
+    description: 'Document management',
+    isImplemented: true,
+  },
+  {
+    name: 'Toolbox Talks',
+    icon: 'MessageSquare',
+    path: '/toolbox-talks',
+    description: 'Safety discussions',
+    isImplemented: true,
+  },
+  {
+    name: 'Training & Certification',
+    icon: 'GraduationCap',
+    path: '/training',
+    description: 'Training management',
+    isImplemented: true,
+  },
+  {
+    name: 'Notifications',
+    icon: 'Bell',
+    path: '/notifications',
+    description: 'System notifications',
+    isImplemented: false,
+  },
+  {
+    name: 'JHA',
+    icon: 'Shield',
+    path: '/jha',
+    description: 'Job Hazard Analysis',
+    isImplemented: false,
+  },
+  {
+    name: 'Support',
+    icon: 'HelpCircle',
+    path: '/support',
+    description: 'Help and support',
+    isImplemented: false,
+  },
+  {
+    name: 'Equipment Inspection',
+    icon: 'Wrench',
+    path: '/equipment-inspection',
+    description: 'Equipment management',
+    isImplemented: false,
+  },
+  {
+    name: 'Site Assessment',
+    icon: 'MapPin',
+    path: '/site-assessment',
+    description: 'Site evaluations',
+    isImplemented: false,
+  },
+  {
+    name: 'Messaging',
+    icon: 'MessageCircle',
+    path: '/messaging',
+    description: 'Internal messaging',
+    isImplemented: false,
+  },
+];
+
+export const iconMap = {
+  LayoutDashboard,
+  Users,
+  AlertTriangle,
+  FileText,
+  MessageSquare,
+  GraduationCap,
+  Bell,
+  Shield,
+  HelpCircle,
+  Wrench,
+  MapPin,
+  MessageCircle,
+}; 
